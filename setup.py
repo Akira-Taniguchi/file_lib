@@ -4,6 +4,7 @@ setup(
     name='file_lib',
     version='1.0.1',
     description='File Library',
+    long_description='https://pypi.python.org/pypi/file_lib',
     url='https://github.com/Akira-Taniguchi/file_lib',
     author='AkiraTaniguchi',
     author_email ='dededededaiou2003@yahoo.co.jp',
