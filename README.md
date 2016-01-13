@@ -5,11 +5,11 @@ file_lib
 
 使い方
 ------
-１．pipコマンドを実行し、モジュールをダウンロードしてください。
+１．pipコマンドを実行し、モジュールをダウンロードしてください
 
     pip install file_lib
 
-２．クラスをインポートし、接続情報をコンストラクタで指定してください
+２．クラスをインポートし、下記例の用に使用してください
 
     from file_lib.csv_file import CsvFileReader
     reader = CsvFileReader(/tmp/item_list.csv)
