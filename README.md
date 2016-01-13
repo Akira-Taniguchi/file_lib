@@ -3,6 +3,23 @@ file_lib
 ファイル操作に関連するクラス、関数を作成しました
 ご利用は自己責任でご自由にどうぞ
 
+使い方
+------
+１．pipコマンドを実行し、モジュールをダウンロードしてください。
+
+    pip install file_lib
+
+２．クラスをインポートし、接続情報をコンストラクタで指定してください
+
+    from file_lib.csv_file import CsvFileReader
+    reader = CsvFileReader(/tmp/item_list.csv)
+    for line in reader.read_file()
+        print ','.join(line)
+
+    from file_lib.file_utils import get_file_lines
+    for line in get_file_lines(/tmp/item_list.csv)
+        print line
+
 機能紹介
 ------
 ### CsvFileReader
