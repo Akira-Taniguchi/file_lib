@@ -221,19 +221,21 @@ is_gzip(file_path):gzipファイルかどうか判定する
 
 #### json
 ***
-read_json_file(file_path):jsonファイルを読み取り、jsonオブジェクトを取得する
+read_json_file(file_path, encoding='utf-8'):jsonファイルを読み取り、jsonオブジェクトを取得する
 
 | 名前 | 必須 | 説明 | デフォルト値 | 
 |:-----------|:------------:|:-----------|:-----------| 
 | file_path | ◯ | 読み取りたいjsonファイルのパス | - | 
+| encoding | × | ファイルの文字コード | utf-8 | 
 戻り値：jsonオブジェクト(Dict)
 ***
-write_json_file(file_path, data):jsonオブジェクトをファイルに落とし込みます
+write_json_file(file_path, data, encoding='utf-8'):jsonオブジェクトをファイルに落とし込みます
 
 | 名前 | 必須 | 説明 | デフォルト値 | 
 |:-----------|:------------:|:-----------|:-----------| 
 | file_path | ◯ | オブジェクトを保存したいファイルのパス | - |
 | data | ◯ | 保存したいjsonオブジェクト | - |
+| encoding | × | ファイルの文字コード | utf-8 | 
 戻り値：なし
 ***
 
