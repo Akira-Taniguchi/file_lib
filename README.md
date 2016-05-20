@@ -323,6 +323,16 @@ compress_file_password(move_dir, compress_file_name, target_file_name, password)
 | password | ◯ | パスワード | - |
 戻り値：なし
 ***
+compress_files_with_password(move_dir, compresses, zip_file_name, password):暗号化されたzipファイルを作成する
+
+| 名前 | 必須 | 説明 | デフォルト値 | 
+|:-----------|:------------:|:-----------|:-----------| 
+| move_dir | ◯ | 圧縮ファイルの配置ディレクトリ | - |
+| compresses | ◯ | 圧縮ファイル名称(リスト形式) | - |
+| zip_file_name | ◯ | 圧縮後のファイル名称 | - |
+| password | ◯ | パスワード | - |
+戻り値：なし
+***
 decompress_file(decompress_file_path, target_dir, target_file):圧縮されたzipファイルのなかから、特定のファイルのみを解凍する
 
 | 名前 | 必須 | 説明 | デフォルト値 | 

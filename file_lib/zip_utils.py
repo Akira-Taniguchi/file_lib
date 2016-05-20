@@ -44,6 +44,15 @@ def compress_file_password(move_dir, compress_file_name, target_file_name, passw
     os.chdir(tmp)
 
 
+def compress_files_with_password(move_dir, compresses, zip_file_name, password):
+    tmp = os.getcwd()
+    os.chdir(move_dir)
+    files = ' '.join(compresses)
+    cmd = 'zip -P %s %s %s' % (password, zip_file_name, files)
+    subprocess.call(cmd.strip().split(' '))
+    os.chdir(tmp)
+
+
 def decompress_file(decompress_file_path, target_dir, target_file):
     file_path = None
     with zipfile.ZipFile(decompress_file_path, 'r') as zip_file_obj:
