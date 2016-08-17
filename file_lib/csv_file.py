@@ -49,17 +49,12 @@ class CsvFileWriter(object):
         self.__writer = unicodecsv.writer(self.__write_file_obj, encoding=self.__encode, **self.__arg_dict)
         self.__ignore = ignore
 
-    def write_file(self, fetch_data):
-        for line_data in fetch_data:
-            self.write_one_line(line_data)
-        self.__write_file_obj.close()
-
     def __create_file_obj(self):
         if os.path.isdir(os.path.dirname(self.__file_path)) is False:
             os.makedirs(os.path.dirname(self.__file_path))
         return codecs.open(self.__file_path, 'wb')
 
-    def write_one_line(self, data):
+    def write_line(self, data):
         tmp = map(lambda n: self.__check_data(n), data)
         self.__writer.writerow(tmp)
 

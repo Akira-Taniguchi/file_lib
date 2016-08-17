@@ -62,7 +62,7 @@ write_file(fetch_data):CSVファイルを複数行書き込みます、書き込み終了後、自動でフ
 | fetch_data | ◯ | 書き込みたい内容、リストのリストを指定する | - |
 戻り値：なし
 ***
-write_one_line(data):CSVファイルを１行書き込みます
+write_line(data):CSVファイルを１行書き込みます
 
 | 名前 | 必須 | 説明 | デフォルト値 | 
 |:-----------|:------------:|:-----------|:-----------| 
@@ -145,7 +145,7 @@ replace_file_contents(from_file_path, to_file_path, replace_dict):ファイルの中身
 | replace_dict | ◯ | 置換情報 | - |
 戻り値：なし
 ***
-get_dir_list(target_dir, include_hidden_folder=False):指定したディレクトリ内に存在するディレクtリのリストを取得します
+get_dirs(target_dir, include_hidden_folder=False):指定したディレクトリ内に存在するディレクtリのリストを取得します
 
 | 名前 | 必須 | 説明 | デフォルト値 | 
 |:-----------|:------------:|:-----------|:-----------| 

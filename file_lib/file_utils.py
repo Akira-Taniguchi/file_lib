@@ -60,15 +60,13 @@ def replace_file_contents(from_file_path, to_file_path, replace_dict):
     write_file.close()
 
 
-def get_dir_list(target_dir, include_hidden_folder=False):
-    dir_list = []
+def get_dirs(target_dir, include_hidden_folder=False):
     for dir_or_file_name in os.listdir(target_dir):
         if os.path.isdir(os.path.join(target_dir, dir_or_file_name)) is False:
             continue
         if include_hidden_folder is False and dir_or_file_name.startswith('.'):
             continue
-        dir_list.append(dir_or_file_name)
-    return dir_list
+        yield dir_or_file_name
 
 
 def get_file_path_list(target_folder_path, asc=True):
@@ -94,7 +92,7 @@ def interval_delete(target_folder_path, file_count):
 
 
 def interval_delete_folder(target_folder_path, leave_count):
-    folder_list = get_dir_list(target_folder_path)
+    folder_list = get_dirs(target_folder_path)
     folder_path_list = map(lambda n: os.path.join(target_folder_path, n), folder_list)
     folder_path_list.sort(cmp=lambda x, y: int(os.path.getmtime(x) - os.path.getmtime(y)), reverse=True)
     for idx, folder_path in enumerate(folder_path_list):
